@@ -24,12 +24,6 @@ public class Stepdef {
         support.isUserCreated();
     }
 
-
-//    @When("I upadte user details")
-//    public void iUpadteUserDetails() throws Throwable{
-//        support.updateUser1();
-//    }
-
     @Then("user detail is updated")
     public void userDetailIsUpdated() {
         support.isUserUpdated();

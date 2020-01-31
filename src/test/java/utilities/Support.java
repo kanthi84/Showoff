@@ -13,10 +13,10 @@ import static org.junit.Assert.*;
 
 public class Support {
 
-    @Before
-    public void setUp() {
-        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
-    }
+//    @Before
+//    public void setUp() {
+//        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+//    }
 
     Endpoints endpoints = new utilities.Endpoints();
 
@@ -110,43 +110,6 @@ public class Support {
         userId = user.jsonPath().getString("data.user.id");
     }
 
-//    public void updateUser1() throws Throwable{
-//
-//        JSONObject userJson = new JSONObject();
-//        JSONArray userArray = new JSONArray();
-//        JSONObject userParam = new JSONObject();
-//
-//        userJson.put("client_id", clientId);
-//        userJson.put("client_secret", clientSecret);
-//
-//        userParam.put("first_name", "Soff33");
-//        userParam.put("last_name", "Test1" );
-//        userParam.put("date_of_birth", 11041984);
-//        userParam.put("image_url", "https://static.thenounproject.com/png/961-200.png");
-//
-//        userArray.put(userParam);
-//
-//        userJson.put("user", userParam);
-//
-//        response = given()
-//                .relaxedHTTPSValidation()
-//                .headers(
-//                        "Authorization",
-//                        accressToken
-//
-//                )
-//                .header("Content-Type", JSON)
-//                .when()
-//                .put(updateUser)
-//                .then()
-//                .log()
-//                .all()
-//                .contentType(ContentType.JSON)
-//                .statusCode(200)
-//                .extract()
-//                .response();
-//
-//    }
 
     public void updateUser(String fName, String lName, String dob) throws Throwable{
 
